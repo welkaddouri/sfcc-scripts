@@ -1,0 +1,13 @@
+{
+  "name": "sfcc-scripts",
+  "version": "0.0.1",
+  "description": "some useful commands line for SFCC development",
+  "scripts": {},
+  "author": "walid.elkaddouri@gmail.com",
+  "license": "ISC",
+  "bin": {
+    "sfcc-scripts": "./cli.js"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
