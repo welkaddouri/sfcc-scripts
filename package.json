@@ -9,5 +9,8 @@
     "sfcc-scripts": "./cli.js"
   },
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "console-colors.js": "^1.4.0",
+    "help": "^3.0.2"
+  }
 }

@@ -1,11 +1,17 @@
 #!/usr/bin/env node
 
 const { updateConf } =  require('./updateConf');
+const help = require('help')('usage.txt')
 
 
 const [, , ...args] = process.argv;
 
-if (args[0] === '--updateConf') {
-    updateConf();
+switch (args[0]) {
+    case '--updateConf':
+        updateConf();
+    default:
+        help(0);    
 }
+
+
 

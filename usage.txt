@@ -1,0 +1,3 @@
+usage: sffc-scripts [options]
+  options:
+    --updateConf  update dw.json from top directory project to all sub cartridges recursively
