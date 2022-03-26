@@ -1,3 +1,6 @@
 usage: sffc-scripts [options]
   options:
     --updateConf  update dw.json from top directory project to all sub cartridges recursively
+    --importProperties  import properties for a provided base cartridges folder
+    --exportProperties  export properties for a provided base cartridges folder
+    --help show help informations

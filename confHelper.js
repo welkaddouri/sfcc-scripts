@@ -1,3 +1,5 @@
+'use strict';
+
 const colors = require('console-colors.js').default
 const fs = require('fs');
 const {getConfFiles} = require('./utils');
