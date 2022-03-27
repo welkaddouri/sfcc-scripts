@@ -1,11 +1,11 @@
 {
   "name": "sfcc-scripts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CLI that provide some useful commands line for SFCC development",
   "author": "Walid El kaddouri",
   "license": "ISC",
   "bin": {
-    "sfcc-scripts": "./cli.js"
+    "sfcc-scripts": "./src/cli.js"
   },
   "dependencies": {
     "console-colors.js": "^1.4.0",
