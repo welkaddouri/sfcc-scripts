@@ -30,8 +30,16 @@ let readFiles = (dirname, onFileContent, onError, onFinish) => {
             onError(err);
             return;
         }
-
-        filenames.forEach((filename) => {
+        
+        filenames.sort((filename1, filename2) => {
+            var fileCat1 = filename1.split('_')[0].replace('.properties', '');
+            var fileCat2 = filename2.split('_')[0].replace('.properties', '');
+            if (fileCat1 == fileCat2) {
+                return 0;
+            } else {
+                return fileCat1 > fileCat2 ? 1 : -1;
+            }
+        }).forEach((filename) => {
             try {
                 var content = fs.readFileSync(dirname + filename, 'utf8')
                 onFileContent(filename, content);
