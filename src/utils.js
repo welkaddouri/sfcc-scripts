@@ -35,7 +35,7 @@ let readFiles = (dirname, onFileContent, onError, onFinish) => {
             var fileCat1 = filename1.split('_')[0].replace('.properties', '');
             var fileCat2 = filename2.split('_')[0].replace('.properties', '');
             if (fileCat1 == fileCat2) {
-                return 0;
+                return filename1.length - filename2.length;
             } else {
                 return fileCat1 > fileCat2 ? 1 : -1;
             }
