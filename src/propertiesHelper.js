@@ -98,7 +98,7 @@ const importProperties = (baseCartridgesFolderName) => {
         return;
     }
 
-    glob(`./${baseCartridgesFolderName}/cartridges/**/resources/`, async (err, res) => {
+    glob(`{./${baseCartridgesFolderName}/cartridges/**/resources/,./cartridges/${baseCartridgesFolderName}/**/resources/}`, async (err, res) => {
         if (err) {
             console.log('Error', err);
         } else {
@@ -111,7 +111,7 @@ const importProperties = (baseCartridgesFolderName) => {
             let workbook;
 
             for (let k = 0; k < res.length; k++) {
-                cartridgeName = res[k].split('/')[3];
+                cartridgeName = res[k].split('/').slice(-5)[0];
 
                 try {
                     workbook = readXlsxFile.readFile(`./${cartridgeName}.xlsx`);
@@ -187,7 +187,7 @@ const exportProperties = (baseCartridgesFolderName) => {
         console.log(colors.red('Please provide a baseCartridgesFolderName'));
         return;
     }
-    glob(`./${baseCartridgesFolderName}/cartridges/**/resources/`, async (err, res) => {
+    glob(`{./${baseCartridgesFolderName}/cartridges/**/resources/,./cartridges/${baseCartridgesFolderName}/**/resources/}`, async (err, res) => {
         if (err) {
             console.log(colors.red('Please provide a valid baseCartridgesFolderName'));
             return;
@@ -256,7 +256,7 @@ const exportProperties = (baseCartridgesFolderName) => {
         }
 
         for (let k = 0; k < res.length; k++) {
-            cartridgeName = res[k].split('/')[3];
+            cartridgeName = res[k].split('/').slice(-5)[0];
             await readFiles(res[k], (filename, content) => {
                 maxLength = 10;
                 sheetName = filename.replace('.properties', '');
