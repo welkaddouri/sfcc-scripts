@@ -240,7 +240,8 @@ const exportProperties = (baseCartridgesFolderName) => {
         }
 
         const createSheetOrAddLocaleColumn = (sheetName, column) => {
-            var localeSeparatorIndex = sheetName.indexOf('_');
+            // search for sheetName without locale ( ex am_order_details_fr_CH -> am_order_details or address_ko_KR -> address)
+            var localeSeparatorIndex = sheetName.search(/^(.)*_[a-z]{2}_[A-Z]{2}$/i);
             if (localeSeparatorIndex == -1) {
                 column = 2;
                 ws = wb.addWorksheet(sheetName);
