@@ -1,6 +1,6 @@
 {
   "name": "sfcc-scripts",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "CLI that provide some useful commands line for SFCC development",
   "author": "Walid El kaddouri",
   "license": "ISC",
