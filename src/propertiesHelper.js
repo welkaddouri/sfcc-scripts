@@ -98,7 +98,7 @@ const importProperties = (baseCartridgesFolderName) => {
         return;
     }
 
-    glob(`{./${baseCartridgesFolderName}/cartridges/**/resources/,./cartridges/${baseCartridgesFolderName}/**/resources/}`, async (err, res) => {
+    glob(`{./${baseCartridgesFolderName}/cartridges/${baseCartridgesFolderName}/**/resources/,./cartridges/${baseCartridgesFolderName}/**/resources/}`, async (err, res) => {
         if (err) {
             console.log('Error', err);
         } else {
@@ -187,7 +187,7 @@ const exportProperties = (baseCartridgesFolderName) => {
         console.log(colors.red('Please provide a baseCartridgesFolderName'));
         return;
     }
-    glob(`{./${baseCartridgesFolderName}/cartridges/**/resources/,./cartridges/${baseCartridgesFolderName}/**/resources/}`, async (err, res) => {
+    glob(`{./${baseCartridgesFolderName}/cartridges/${baseCartridgesFolderName}/**/resources/,./cartridges/${baseCartridgesFolderName}/**/resources/}`, async (err, res) => {
         if (err) {
             console.log(colors.red('Please provide a valid baseCartridgesFolderName'));
             return;
